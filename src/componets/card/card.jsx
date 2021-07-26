@@ -10,6 +10,9 @@ function Card() {
                 <p className="card__text card__text--coach"></p>
                 <p className="card__text card__text--percent">95 %</p>
             </article>
+            <button className="card__edit-btn" type="button">
+                <img className="card__edit-pic" src="./img/icon-edit.svg" alt="Edit" width="3" height="11"/>
+            </button>
         </li>
     );
 }
