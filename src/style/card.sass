@@ -1,0 +1,20 @@
+.card
+  //display: flex
+  font-size: 12px
+  font-weight: 500
+  color: rgba(0, 0, 0, 0.87)
+  display: grid
+  grid-template-columns: 31% 41% 10% 16%
+
+.card__text
+  line-height: 16px
+  margin-bottom: 8px
+
+  &--percent
+    text-align: right
+    position: relative
+    &:before
+      content: url("../img/percent-icon.svg")
+      position: absolute
+      top: 1px
+      right: 34px

@@ -1,0 +1,104 @@
+@import "viewports"
+@import "font"
+@import "visually-hidden"
+
+.form-container
+  display: flex
+  justify-content: center
+
+.filter-form
+  display: flex
+  flex-direction: column
+  width: 91%
+  position: relative
+
+.filter-form__list
+  padding: 33px 0 0 0
+  margin: 0
+  list-style: none
+
+.filter-form__item
+  display: flex
+  position: relative
+
+  &--search
+    &::before
+      content: url("../img/search-icon.svg")
+      //background-image: url("../img/search-icon.svg")
+      position: absolute
+      top: 7px
+      left: 0
+      width: 20px
+      height: 20px
+      opacity: 0.38
+      z-index: 1
+
+  &--sort
+    display: flex
+    flex-direction: column
+    margin-top: 35px
+
+
+  &:not(:nth-child(1)):not(:nth-child(2))
+    display: none
+    @media (min-width: $desktop-width)
+      display: block
+
+.filter-form__label
+  display: none
+
+  &--sort
+   display: inline
+   font-weight: 500
+   font-size: 10px
+   color: rgba(0, 0, 0, 0.54)
+
+  @media (min-width: $desktop-width)
+    display: inline
+
+.filter-form__input
+  @include main-font
+  font-weight: 500
+  font-size: 12px
+  flex-grow: 1
+  padding: 7px 34px
+  border: none
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+  position: relative
+
+  &--sort
+    padding: 6px 0
+    margin-left: -4px
+
+.filter-form__filter-result
+  display: none
+
+.filter-form__set-btn
+  position: absolute
+  top: 39px
+  right: 0
+  width: 20px
+  height: 20px
+  background: transparent
+  font-size: 0
+  border: none
+  cursor: pointer
+
+  &::after
+    content: url("../img/settings-icon.svg")
+    position: absolute
+    top: 0
+    left: 0
+    width: 20px
+    height: 20px
+    opacity: 0.54
+    z-index: 1
+
+
+
+  @media (min-width: $desktop-width)
+    display: block
+    position: relative
+
+.filter-form__reset-btn
+  display: none

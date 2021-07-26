@@ -1,0 +1,41 @@
+@import "colors"
+
+.programs-types
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+  display: flex
+  justify-content: center
+
+
+.programs-types__list
+  list-style: none
+  margin: 0
+  padding: 9px 0
+  width: 91%
+  font-weight: 500
+  font-size: 12px
+  display: flex
+  justify-content: flex-start
+
+
+
+
+.programs-types__item
+
+
+.programs-types__link
+  color: black
+  opacity: 0.54
+  text-decoration: none
+  margin-right: 16px
+  position: relative
+
+  &--current
+    opacity: 0.84
+    &::before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 2px
+      border-radius: 2px
+      background: $main-blue
+      bottom: -10px
