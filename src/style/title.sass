@@ -5,3 +5,16 @@
   font-size: 0
   @include main-font
   font-weight: 700
+
+  @media (min-width: $desktop-width)
+    font-size: 38px
+    margin: 16px 0
+    padding-left: 48px
+    color: rgba(0, 0, 0, 0.87)
+    position: relative
+
+    &::before
+      content: url("../img/union.svg")
+      position: absolute
+      left: 1px
+      top: 2px

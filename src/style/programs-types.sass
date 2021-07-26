@@ -1,9 +1,14 @@
 @import "colors"
+@import "./viewports.sass"
 
 .programs-types
   border-bottom: 1px solid rgba(0, 0, 0, 0.08)
   display: flex
   justify-content: center
+
+  @media (min-width: $desktop-width)
+    justify-content: flex-start
+    margin-top: 28px
 
 
 .programs-types__list
@@ -16,10 +21,15 @@
   display: flex
   justify-content: flex-start
 
+  @media (min-width: $desktop-width)
+    width: auto
+
 
 
 
 .programs-types__item
+  @media (min-width: $desktop-width)
+    margin-right: 10px
 
 
 .programs-types__link

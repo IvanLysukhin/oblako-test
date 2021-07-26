@@ -1,10 +1,14 @@
 @import "viewports"
 @import "font"
 @import "visually-hidden"
+@import "colors"
 
 .form-container
   display: flex
   justify-content: center
+
+  @media (min-width: $desktop-width)
+    justify-content: flex-start
 
 .filter-form
   display: flex
@@ -12,16 +16,30 @@
   width: 91%
   position: relative
 
+  @media (min-width: $desktop-width)
+    width: 100%
+
 .filter-form__list
   padding: 33px 0 0 0
   margin: 0
   list-style: none
 
+  @media (min-width: $desktop-width)
+    display: flex
+    flex-wrap: wrap
+    margin-top: 23px
+    justify-content: flex-start
+
 .filter-form__item
   display: flex
   position: relative
 
+  @media (min-width: $desktop-width)
+    flex-basis: 166px
+    margin-right: 26px
+
   &--search
+
     &::before
       content: url("../img/search-icon.svg")
       //background-image: url("../img/search-icon.svg")
@@ -33,16 +51,22 @@
       opacity: 0.38
       z-index: 1
 
+      @media (min-width: $desktop-width)
+        top: 17px
+
   &--sort
     display: flex
     flex-direction: column
     margin-top: 35px
+    @media (min-width: $desktop-width)
+     display: none
 
 
   &:not(:nth-child(1)):not(:nth-child(2))
     display: none
     @media (min-width: $desktop-width)
-      display: block
+      display: flex
+      flex-direction: column
 
 .filter-form__label
   display: none
@@ -55,6 +79,13 @@
 
   @media (min-width: $desktop-width)
     display: inline
+    font-weight: 500
+    font-size: 10px
+    color: rgba(0, 0, 0, 0.54)
+    margin-bottom: 5px
+
+    &--search
+      display: none
 
 .filter-form__input
   @include main-font
@@ -66,12 +97,36 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.08)
   position: relative
 
+  @media (min-width: $desktop-width)
+    padding: 0 0 6px 0
+
+  &--search
+    @media (min-width: $desktop-width)
+     padding: 10px 0 0 33px
+     width: 139px
+
   &--sort
     padding: 6px 0
     margin-left: -4px
 
+.filter-form__program-option
+  @media (min-width: $desktop-width)
+    padding: 0
+
+.filter-form__info-container
+  @media (min-width: $desktop-width)
+    margin-top: 25px
+    display: flex
+
 .filter-form__filter-result
   display: none
+
+  @media (min-width: $desktop-width)
+    display: block
+    font-weight: 500
+    font-size: 12px
+    color: rgba(0, 0, 0, 0.54)
+    width: 155px
 
 .filter-form__set-btn
   position: absolute
@@ -93,12 +148,48 @@
     height: 20px
     opacity: 0.54
     z-index: 1
+    @media (min-width: $desktop-width)
+      content: url("../img/settings-icon-blue.svg")
+      top: 11px
+      fill: $main-blue
+      opacity: 1
 
 
 
   @media (min-width: $desktop-width)
     display: block
     position: relative
+    top: 0
+    font-size: 12px
+    font-weight: 600
+    color: $main-blue
+    width: auto
+    height: auto
+    padding-left: 26px
+    margin-right: 41px
+
 
 .filter-form__reset-btn
   display: none
+
+  @media (min-width: $desktop-width)
+    display: block
+    background: transparent
+    border: none
+    @include main-font
+    font-weight: 600
+    font-size: 12px
+    color: rgba(0, 0, 0, 0.54)
+    padding-left: 23px
+    position: relative
+    cursor: pointer
+
+    &::after
+     content: url("../img/close-icon.svg")
+     position: absolute
+     top: 13px
+     left: -4px
+     width: 20px
+     height: 20px
+     opacity: 0.54
+     z-index: 1

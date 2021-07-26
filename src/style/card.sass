@@ -1,10 +1,15 @@
+@import "viewports"
+
 .card
-  //display: flex
   font-size: 12px
   font-weight: 500
   color: rgba(0, 0, 0, 0.87)
   display: grid
   grid-template-columns: 31% 41% 10% 16%
+
+  @media (min-width: $desktop-width)
+    grid-template-columns: 110px 576px 136px 132px auto
+    margin-bottom: 8px
 
 .card__text
   line-height: 16px
@@ -18,3 +23,16 @@
       position: absolute
       top: 1px
       right: 34px
+      @media (min-width: $desktop-width)
+       left: 3px
+
+    @media (min-width: $desktop-width)
+      text-align: left
+      padding-left: 25px
+
+  &--coach
+    display: none
+
+    @media (min-width: $desktop-width)
+      display: block
+

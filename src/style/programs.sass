@@ -10,27 +10,37 @@
   width: 91%
   margin: 0 auto
 
+  @media (min-width: $desktop-width)
+    width: 100%
+
 .programs__titles-list
   list-style: none
   padding: 0
-  //display: flex
-  //justify-content: space-between
   display: grid
   grid-template-columns: 24% 28% 24% 22%
   font-size: 10px
   color: rgba(0, 0, 0, 0.54)
   margin-bottom: 6px
 
+  @media (min-width: $desktop-width)
+    grid-template-columns: 110px 576px 136px 132px auto
+    margin-top: 23px
+    margin-bottom: 1px
+
 .programs__titles-item
   flex-grow: 1
 
   &--name
     text-align: center
+    @media (min-width: $desktop-width)
+      text-align: left
 
   &--right
     text-align: end
     &:nth-child(1)
       margin-right: -7px
+    @media (min-width: $desktop-width)
+      text-align: left
 
   &--train
     display: none
@@ -45,3 +55,6 @@
   padding: 0
   display: flex
   flex-direction: column
+
+  @media (min-width: $desktop-width)
+    width: 100%
