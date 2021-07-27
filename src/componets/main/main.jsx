@@ -4,6 +4,7 @@ import ProgramsTypes from "../programs-types/programs-types";
 import Form from "../form/from";
 import Programs from "../programs/programs";
 import "../../style/title.sass"
+import ModalForm from "../modal-form/modal-form";
 
 
 
@@ -22,6 +23,7 @@ function App() {
                 </section>
                 <Programs/>
             </main>
+            <ModalForm/>
         </div>
     );
 }

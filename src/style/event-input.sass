@@ -1,0 +1,93 @@
+@import "font"
+
+.event-input
+
+.event-input__name
+  display: flex
+  flex-direction: column
+
+.event-input__name-label
+  font-weight: 500
+  font-size: 10px
+  color: rgba(0, 0, 0, 0.54)
+
+  &--empty
+    display: none
+
+.event-input__name-input,
+.event-input__info-input
+  @include main-font
+  font-weight: 500
+  font-size: 12px
+  color: rgba(0, 0, 0, 0.38)
+  padding: 6px 0
+  border: none
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+  position: relative
+
+  &--active
+    color: rgba(0, 0, 0, 0.87)
+
+  &--empty
+    padding-top: 20px
+
+
+  &--train
+    &:after
+      content: "Тренинг"
+      width: auto
+      height: auto
+      position: absolute
+      top: 0
+      left: 0
+      font-weight: 500
+      font-size: 12px
+      color: rgba(0, 0, 0, 0.22)
+
+
+.event-input__info-inputs
+  list-style: none
+  padding: 0
+  display: flex
+  justify-content: flex-end
+  margin-top: 33px
+
+
+.event-input__info-item
+  display: flex
+  flex-direction: column
+  flex-basis: 246px
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+  margin-left: 16px
+  padding-left: 61px
+  position: relative
+
+  &--date
+    &:before
+     content: url("../img/icon-date.svg")
+     position: absolute
+     left: 37px
+     top: 17px
+
+  &--time
+    &:before
+      content: url("../img/icon-time.svg")
+      position: absolute
+      left: 28px
+      top: 17px
+
+  &--coach
+    &:before
+      content: url("../img/icon-coach.svg")
+      position: absolute
+      left: 28px
+      top: 17px
+      width: 18px
+      height: 18px
+
+  &--empty
+    &::before
+      opacity: 0.5
+
+.event-input__info-input
+  border: none
