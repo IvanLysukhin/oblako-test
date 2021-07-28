@@ -1,0 +1,113 @@
+@import "viewports"
+
+.participants-form
+  display: flex
+  justify-content: center
+
+.participants-form__form
+  width: 801px
+  display: grid
+  grid-template-columns: 1fr 1fr
+  margin-top: 21px
+
+
+.participants-form__title
+  font-weight: bold
+  font-size: 14px
+
+.participants-form__event-participants
+  padding-left: 24px
+
+
+.participants-form__list
+  padding: 4px 0 0 0
+  margin: 0
+  list-style: none
+
+  @media (min-width: $desktop-width)
+    display: flex
+    flex-wrap: wrap
+    margin-top: 23px
+    justify-content: flex-start
+
+
+.participants-form__item
+  display: flex
+  position: relative
+
+  @media (min-width: $desktop-width)
+    flex-basis: 166px
+    margin-right: 26px
+
+  &--search
+    &::before
+      content: url("../img/search-icon.svg")
+      position: absolute
+      top: 7px
+      left: 0
+      width: 20px
+      height: 20px
+      opacity: 0.38
+      z-index: 1
+
+      @media (min-width: $desktop-width)
+        top: 17px
+
+  &--sort
+    display: flex
+    flex-direction: column
+    margin-top: 35px
+    @media (min-width: $desktop-width)
+      display: none
+
+
+.participants-form__item
+  margin-right: 38px
+  margin-bottom: 34px
+
+  &--admin
+    margin-right: 0
+    flex-direction: column
+  &--exp
+    margin-right: 0
+//.filter-form__list
+//  padding: 33px 0 0 0
+//  margin: 0
+//  list-style: none
+//
+//  @media (min-width: $desktop-width)
+//    display: flex
+//    flex-wrap: wrap
+//    margin-top: 23px
+//    justify-content: flex-start
+//
+//.filter-form__item
+//  display: flex
+//  position: relative
+//
+//  @media (min-width: $desktop-width)
+//    flex-basis: 166px
+//    margin-right: 26px
+//
+//  &--search
+//
+//    &::before
+//      content: url("../img/search-icon.svg")
+//      //background-image: url("../img/search-icon.svg")
+//      position: absolute
+//      top: 7px
+//      left: 0
+//      width: 20px
+//      height: 20px
+//      opacity: 0.38
+//      z-index: 1
+//
+//      @media (min-width: $desktop-width)
+//        top: 17px
+//
+//  &--sort
+//    display: flex
+//    flex-direction: column
+//    margin-top: 35px
+//    @media (min-width: $desktop-width)
+//      display: none

@@ -5,14 +5,26 @@ import Form from "../form/from";
 import Programs from "../programs/programs";
 import "../../style/title.sass"
 import ModalForm from "../modal-form/modal-form";
-
+import {useState} from "react";
 
 
 function App() {
+    const [modalStatus, setModalStatus] = useState(false);
+
+    const clickHandler = () => {
+        setModalStatus(true);
+    }
+
+    const closeHandler = () => {
+        setModalStatus(false);
+    };
+
     return (
-        <div className="app-container">
+        <div className="app-container"
+             on
+        >
             <header className="header-container">
-                <Nav/>
+                <Nav onBtnClickHandler={clickHandler}/>
             </header>
             <main className="main-container">
                 <Breadcrumbs/>
@@ -23,7 +35,7 @@ function App() {
                 </section>
                 <Programs/>
             </main>
-            <ModalForm/>
+            {modalStatus ? <ModalForm onCloseBtnHandler={closeHandler}/> : ''}
         </div>
     );
 }

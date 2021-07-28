@@ -1,0 +1,46 @@
+@import "visually-hidden"
+
+.available-participants
+  font-weight: 500
+  font-size: 12px
+
+.available-participants__all
+  margin-bottom: 17px
+
+.available-participants__list
+  list-style: none
+  padding: 0
+
+
+.available-participants__item
+  margin-bottom: 10px
+
+.available-participants__radio
+  @include visually-hidden
+
+.available-participants__label
+  padding-left: 23px
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 16px
+    height: 16px
+    background-color: rgba(0, 0, 0, 0.05)
+    border-radius: 2px
+
+  &--user
+    display: block
+    padding: 6px 0 6px 58px
+    &::before
+      top: 4px
+
+.available-participants__radio:checked + .available-participants__label
+  &::before
+    background-image: url("../img/icon-apply.svg")
+    background-repeat: no-repeat
+    background-size: 11px 10px
+    background-position: 2px 2px
