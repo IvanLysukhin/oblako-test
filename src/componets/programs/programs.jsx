@@ -24,7 +24,7 @@ function Programs() {
                 </ul>
             </div>
             <ul className="programs__list">
-                {new Array(4).fill('').map((_, id) => <Card key={id}/>)}
+                {new Array(4).fill('').map((_, id) => <Card key={id} id={id}/>)}
             </ul>
         </section>
     );
