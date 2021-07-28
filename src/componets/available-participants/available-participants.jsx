@@ -9,7 +9,7 @@ function AvailableParticipants() {
                 <label className="available-participants__label" htmlFor="all">Все пользователи</label>
             </div>
             <ul className="available-participants__list">
-                {new Array(10).fill('').map((_, id) => <UserCheck id={id}/> )}
+                {new Array(10).fill('').map((_, id) => <UserCheck key={id} id={id}/> )}
             </ul>
         </div>
     );

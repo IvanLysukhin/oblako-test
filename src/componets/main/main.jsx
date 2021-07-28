@@ -5,11 +5,24 @@ import Form from "../form/from";
 import Programs from "../programs/programs";
 import "../../style/title.sass"
 import ModalForm from "../modal-form/modal-form";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 
 function App() {
     const [modalStatus, setModalStatus] = useState(false);
+
+    const onEscClose = (evt) => {
+        if (evt.keyCode === 27) {
+            setModalStatus(false);
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('keydown', onEscClose)
+        return () => {
+            document.removeEventListener('keydown', onEscClose)
+        }
+    }, [])
 
     const clickHandler = () => {
         setModalStatus(true);
